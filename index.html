@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Présentation de Blazor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1f4037, #99f2c8);
+      color: #fff;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      animation: slideDown 1s ease-out;
+    }
+
+    section {
+      padding: 2rem;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    h2 {
+      color: #ffe680;
+      border-bottom: 2px solid #ffe680;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li::before {
+      content: '✔';
+      margin-right: 8px;
+      color: #00ffcc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #ffe680;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-style: italic;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-100px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Présentation de Blazor
+  </header>
+
+  <section>
+    <h2>🔷 Qu'est-ce que Blazor ?</h2>
+    <p>Blazor est un framework web <strong>open-source</strong> développé par Microsoft. Il permet de créer des <strong>applications web interactives</strong> en utilisant le langage <strong>C#</strong> à la place de JavaScript. Cela permet aux développeurs .NET d'utiliser un seul langage (C#) pour coder aussi bien le front-end que le back-end.</p>
+  </section>
+
+  <section>
+    <h2>⚙️ Les modes de fonctionnement</h2>
+    <ul>
+      <li><strong>Blazor Server</strong> : le code C# est exécuté sur le serveur. L'interface utilisateur est mise à jour via une connexion en temps réel grâce à SignalR. Rapide à charger, mais nécessite une connexion constante au serveur.</li>
+      <li><strong>Blazor WebAssembly</strong> : le code est compilé en WebAssembly et exécuté directement dans le navigateur. Idéal pour les apps 100% côté client, même hors-ligne. Mais le chargement initial est plus long.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>✨ Avantages de Blazor</h2>
+    <ul>
+      <li>Permet de coder l'interface et la logique métier en <strong>C#</strong></li>
+      <li>Intégration complète avec l'écosystème .NET et Visual Studio</li>
+      <li>Pas besoin de JavaScript pour la plupart des interactions</li>
+      <li>Partage de code entre le client et le serveur</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📦 Exemples d'utilisation</h2>
+    <ul>
+      <li>Applications de gestion (finances, RH, stock, etc.)</li>
+      <li>Tableaux de bord dynamiques</li>
+      <li>Formulaires interactifs</li>
+      <li>Applications d'administration</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>⚖️ Comparaison avec d'autres frameworks SPA</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Critère</th>
+          <th>Blazor</th>
+          <th>React</th>
+          <th>Angular</th>
+          <th>Vue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Langage</td>
+          <td>C#</td>
+          <td>JavaScript/JSX</td>
+          <td>TypeScript</td>
+          <td>JavaScript</td>
+        </tr>
+        <tr>
+          <td>Exécution</td>
+          <td>Serveur / WebAssembly</td>
+          <td>Navigateur</td>
+          <td>Navigateur</td>
+          <td>Navigateur</td>
+        </tr>
+        <tr>
+          <td>Facilité pour devs .NET</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>⭐⭐</td>
+          <td>⭐⭐</td>
+          <td>⭐⭐</td>
+        </tr>
+        <tr>
+          <td>Performances</td>
+          <td>⭐⭐⭐</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>✅ Conclusion</h2>
+    <p>Blazor révolutionne le développement web pour les développeurs .NET en permettant de créer des applications modernes, performantes et réactives en utilisant <strong>uniquement C#</strong>, aussi bien côté client que côté serveur.</p>
+    <p>Grâce aux évolutions de <strong>.NET 8</strong>, Blazor devient une alternative sérieuse à React, Angular ou Vue, tout en restant dans l’écosystème Microsoft. C'est donc une solution idéale si tu veux te lancer dans le web sans abandonner C# !</p>
+  </section>
+
+  <footer>
+    Partage cette page pour faire découvrir Blazor autour de toi !
+  </footer>
+</body>
+</html>
